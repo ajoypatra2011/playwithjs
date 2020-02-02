@@ -2,56 +2,375 @@
   "ESProblem": [
     {
       "Id": 1,
-      "Problem": "Problem 1",
-      "Desc": "Desc 1",
-      "Solution": [
-        {
-          "Header": "Header 1",
-          "code": "code 1"
-        },
-        {
-          "Header": "Header 2",
-          "code": "code 2"
-        }
-      ],
-      "Input": "AAAA",
-      "Output": "BBBB",
+      "Problem": "What is JavaScript and why it is used?",
+      "Title": "JavaScript is a client-side scripting language which is mostly used for creating websites.",
+      "Desc": "JavaScript is a client-side scripting language which is mostly used for creating websites. It is a standalone language developed in Netscape. It is used when a webpage is to be made dynamic and include special effects on pages during event call.\n\nKey Features:\n1) Light-weight\n2) Interpreted programming language\n3) Good for network-centric applications\n4) Open-source\n5) Cross-platform",
+      "Solution": [],
+      "Input": null,
+      "Output": null,
       "screenshot": "NA"
     },
     {
       "Id": 2,
-      "Problem": "Problem 2",
-      "Desc": "Desc 2",
-      "Solution": [
-        {
-          "Header": "Header 1",
-          "code": "code 1"
-        },
-        {
-          "Header": "Header 2",
-          "code": "code 2"
-        }
-      ],
-      "Input": "AAAA",
-      "Output": "BBBB",
+      "Problem": "What are JavaScript Data Types?",
+      "Title": "Following are the JavaScript Data types:\n1) Number\n2) String...",
+      "Desc": "Following are the JavaScript Data types:\n1) Number\n2) String\n3) Boolean\n4) Object\n5) Undefined",
+      "Solution": [],
+      "Input": null,
+      "Output": null,
       "screenshot": "NA"
     },
     {
       "Id": 3,
-      "Problem": "Problem 3",
-      "Desc": "Desc 3",
+      "Problem": "Define the types of function in Javascript.",
+      "Title": "The types of function are:\n1) Named\n2) Anonymous",
+      "Desc": "The types of function are:",
       "Solution": [
         {
-          "Header": "Header 1",
-          "code": "code 1"
+          "Header": "Named - It contain name at the time of definition.",
+          "code": "function display() {\n   console.log('Named Function');\n}\ndisplay();"
         },
         {
-          "Header": "Header 2",
-          "code": "code 2"
+          "Header": "Anonymous - It doesn't contain any name. They are declared dynamically at runtime.",
+          "code": "var display = function() {\n   console.log('Anonymous Function');\n}\ndisplay(); "
         }
       ],
-      "Input": "AAAA",
-      "Output": "BBBB",
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 4,
+      "Problem": "Define Javascript closure mechanism.",
+      "Title": "A closure is a function having access to the parent scope, even after the parent function has closed.",
+      "Desc": "A closure is a function having access to the parent scope, even after the parent function has closed.\nIn JavaScript, Closures requires when a variable defined outside the current scope is accessed from some inner scope.",
+      "Solution": [
+        {
+          "Header": "Self-invoking functions.",
+          "code": "var add = (function () {\n  var counter = 0;\n  return function () {counter += 1; return counter}\n})();\n\nadd();\nadd();\nadd();\n\n// the counter is now 3"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 5,
+      "Problem": "Define WeakMap object in JavaScript?",
+      "Title": "The JavaScript WeakMap object is a type of collection which is almost similar to Map.",
+      "Desc": "The JavaScript WeakMap object is a type of collection which is almost similar to Map. It stores each element as a key-value pair where keys are weakly referenced. Here, the keys are objects and the values are arbitrary values.",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "function display() {\n let wm = new WeakMap();\n var obj1 = {};\n var obj2 = {};\n var obj3= {};\n wm.set(obj1, 'jQuery');\n wm.set(obj2, 'AngularJS');\n wm.set(obj3,'Bootstrap');\n console.log(wm.has(obj2));\n}\ndisplay();"
+        }
+      ],
+      "Input": null,
+      "Output": "true",
+      "screenshot": "NA"
+    },
+    {
+      "Id": 6,
+      "Problem": "Define Map object in JavaScript?",
+      "Title": "The JavaScript Map object is used to map keys to values.",
+      "Desc": "The JavaScript Map object is used to map keys to values. It stores each element as key-value pair. It operates the elements such as search, update and delete on the basis of specified key.",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "function display() {\n let map = new Map();\n map.set(1,'jQuery');\n map.set(2,'AngularJS');\n map.set(3,'Bootstrap');\n console.log(map.get(1) + ' ' + map.get(2) + ' ' + map.get(3));\n}\ndisplay();"
+        }
+      ],
+      "Input": null,
+      "Output": "jQuery\nAngularJS\nBootstrap",
+      "screenshot": "NA"
+    },
+    {
+      "Id": 7,
+      "Problem": "Define Set object in JavaScript?",
+      "Title": "The JavaScript Set object is used to store the elements with unique values.",
+      "Desc": "The JavaScript Set object is used to store the elements with unique values. The values can be of any type i.e. whether primitive values or object references.",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "function display() {\n let set = new Set();\n set.add('jQuery');\n set.add('Angular');\n set.add('React');\n for (let elements of set) {\n  console.log(elements);\n }\n}\ndisplay();"
+        }
+      ],
+      "Input": null,
+      "Output": "jQuery\nAngular\nReact",
+      "screenshot": "NA"
+    },
+    {
+      "Id": 8,
+      "Problem": "Define Date object in JavaScript?",
+      "Title": "The JavaScript date object can be used to get a day, month and year. By default, JavaScript will use the browser's time zone.",
+      "Desc": "The JavaScript date object can be used to get a day, month and year. By default, JavaScript will use the browser's time zone.",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "function display() {\n let date = new Date();\n let day = date.getDate();\n let month = date.getMonth()+1;\n let year = date.getFullYear();\n console.log('Date is: ' + day + '/' + month + '/' + year);\n}\ndisplay();"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 9,
+      "Problem": "Define strict mode in JavaScript.",
+      "Title": "The JavaScript strict mode is used to generates silent errors.",
+      "Desc": "The JavaScript strict mode is used to generates silent errors. It provides \"use strict\"; expression to enable the strict mode. This expression can only be placed as the first statement in a script or a function.",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "\"use strict\";\nx = 10;\nconsole.log(x);"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 10,
+      "Problem": "Difference between undefined and null value?",
+      "Title": "\"Undefined\" value vs \"null\" value",
+      "Desc": "",
+      "Solution": [
+        {
+          "Header": "Undefined value: A value that is not defined and has no keyword is known as undefined value.",
+          "code": "int number; // undefined"
+        },
+        {
+          "Header": "Null value: A value that is explicitly specified by the keyword \"null\" is known as a null value.",
+          "code": "let str = null; //null"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 11,
+      "Problem": "Output of \"1\" + 2 + 3 in JavaScript?",
+      "Title": "123 because after a string all the + will be treated as string concatenation operator (not binary +).",
+      "Desc": "\"1\" + 2 + 3\n123 because after a string all the + will be treated as string concatenation operator (not binary +).",
+      "Solution": [],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 12,
+      "Problem": "Create an Array in JavaScript.",
+      "Title": "There are 3 ways to create an array in JavaScript.",
+      "Desc": "There are 3 ways to create an array in JavaScript.\n 1) By array literal\n 2) By creating an instance of Array\n 3) By using an Array constructor",
+      "Solution": [
+        {
+          "Header": "Example 1:",
+          "code": "var arr = ['apple', 'mango', 'banana'];"
+        },
+        {
+          "Header": "Example 2:",
+          "code": "let arr = new Array('apple', 'mango', 'banana');"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 13,
+      "Problem": "Create Objects in JavaScript.",
+      "Title": "There are 3 ways to create an object in JavaScript.",
+      "Desc": "There are 3 ways to create an object in JavaScript.\n 1) By object literal\n 2) By creating an instance of Object\n 3) By Object Constructor",
+      "Solution": [
+        {
+          "Header": "Example 1:",
+          "code": "emp = { id: 001, name: 'Sounak Roy', salary: 50000}"
+        },
+        {
+          "Header": "Example 2:",
+          "code": "var emp = new Objet();\nemp['id']=001;\nemp['name']='Sounak Roy';\nemp['salary']=50000"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 14,
+      "Problem": "Output of 10 == '10' and 10 === '10' ?",
+      "Title": "The == operator checks equality only whereas === checks equality, and data type, i.e., a value must be of the same type.",
+      "Desc": "The == operator checks equality only whereas === checks equality, and data type, i.e., a value must be of the same type.",
+      "Solution": [
+        {
+          "Header": "Example 1:",
+          "code": "10 == '10'  // true"
+        },
+        {
+          "Header": "Example 2:",
+          "code": "10 === '10'  // false"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 15,
+      "Problem": "Define an Argument Object in Javascript?",
+      "Title": "Javascript have a build-in object called the argument object.",
+      "Desc": "Javascript have a build-in object called the argument object. The parameters in a function call, are the function arguments.",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "let x = findMax(1,6,8,33);\nlet y = findMin(2,6,7,4);\nfor(let i=0; i<arguments.length; i++) {\n console.log(arguments[i]);\n}"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 16,
+      "Problem": "String to Array conversion and vice versa",
+      "Title": "Array join() and split() method.",
+      "Desc": "Array join() and split() method.",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "let str = 'HellowWorld';\nlet arr = str.split('');\nconsole.log(arr);  // H,e,l,l,o,w,W,o,r,l,d\nconsole.log(arr.join(''));  // HellowWorld"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 17,
+      "Problem": "Web Storage - localStorage and sessionStorage",
+      "Title": "With web storage, web applications can store data locally within the user's browser.",
+      "Desc": "With web storage, web applications can store data locally within the user's browser.\nHTML web storage provides two objects for storing data on the client:\n 1) window.localStorage - stores data with no expiration date\n 2) window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "localStorage.setItem('fname', 'Sounak');\nlocalStorage.getItem('fname');\n\nsessionStorage.setItem('fname', 'Sounak');\nsessionStorage.getItem('fname');"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 18,
+      "Problem": "Array Destructuring in Javascript",
+      "Title": "A way of unpacking the values of an array.",
+      "Desc": "A way of unpacking the values of an array.",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "let arr = [1,2];\nlet first, second = arr;\nconsole.log(first,second);   // 1,2"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 19,
+      "Problem": "Swap two Elements in Javascript",
+      "Title": "Swap two Elements without using a third a variable.",
+      "Desc": "Swap two Elements without using a third a variable.",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "let a = 2;\nlet b = 3;\n[a,b] = [b,a];\nconsole.log(a,b);  //3,2"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 20,
+      "Problem": "Immediately invoking function in Javascript",
+      "Title": "This type of function called only once in it's lifetime.",
+      "Desc": "This type of function called only once in it's lifetime.",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "let F1 = ((a,b) => {\nreturn a+b;\n})(10,20);\nconsole.log(F1);  // 30"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 21,
+      "Problem": "Concatenate Two Array in Javascript",
+      "Title": "Concatenate Two Array using spread operator.",
+      "Desc": "Concatenate Two Array using spread operator.",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "const a = [1,2,3];\nconst b = [4,5];\nconst c = [...a, ...b];\nconsole.log(c);  // 1,2,3,4,5"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 22,
+      "Problem": "Check Prime number in Javascript",
+      "Title": "The number which is only divisible by itself and 1 is known as prime number.",
+      "Desc": "The number which is only divisible by itself and 1 is known as prime number, for example 13 is a prime number because it is only divisible by itself and 1.",
+      "Solution": [
+        {
+          "Header": "Example:",
+          "code": "IsPrime = (n) => {\n if(n == 2) {\n  return true;\n }\nif(!Number.isInteger(n) || n<2 || !(n%2)) {\n  if(n%i == 0) {\n   return false;\n  }\n}\nreturn true;\n}\nconsole.log(IsPrime(13));  // true"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 23,
+      "Problem": "Array Copy in Javascript",
+      "Title": "Click below to get most efficient way to copy an array.",
+      "Desc": "",
+      "Solution": [
+        {
+          "Header": "Example 1:",
+          "code": "let a = [1,2,3,4,5];\nlet b = Object.assign([], a);"
+        },
+        {
+          "Header": "Example 2:",
+          "code": "let a = [1,2,3,4,5];\nlet b = [...a];"
+        }
+      ],
+      "Input": null,
+      "Output": null,
+      "screenshot": "NA"
+    },
+    {
+      "Id": 24,
+      "Problem": "Eliminate duplicate elements in Array",
+      "Title": "Click below to get most efficient way to eliminate duplicate elements in Array.",
+      "Desc": "",
+      "Solution": [
+        {
+          "Header": "Example 1:",
+          "code": "let a = [1,2,5,2,1,8];\nobj = {};\nfor(let i of a) {\n obj[i] = true;\n}\nlet b = Object.keys(obj);\nconsole.log(b);"
+        },
+        {
+          "Header": "Example 2:",
+          "code": "let a = [1,2,5,2,1,8];\nconsole.log([...new Set(a)]);"
+        }
+      ],
+      "Input": null,
+      "Output": null,
       "screenshot": "NA"
     }
   ]

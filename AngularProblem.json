@@ -3,6 +3,7 @@
     {
       "Id": 1,
       "Problem": "Problem 1",
+      "Title": "Title",
       "Desc": "Desc 1",
       "Solution": [
         {
@@ -21,6 +22,7 @@
     {
       "Id": 2,
       "Problem": "Problem 2",
+      "Title": "Title",
       "Desc": "Desc 2",
       "Solution": [
         {
@@ -39,6 +41,7 @@
     {
       "Id": 3,
       "Problem": "Problem 3",
+      "Title": "Title",
       "Desc": "Desc 3",
       "Solution": [
         {
